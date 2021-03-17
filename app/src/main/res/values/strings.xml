@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="notification">Notification</string>
+    <string name="add_word">Notification</string>
+
+    <string name="app_name">ClockAlarm</string>
+
+    <string-array name="Timer">
+        <item>15 min</item>
+        <item>30 min</item>
+        <item>45 min</item>
+        <item>60 min</item>
+
+    </string-array>
+</resources>
