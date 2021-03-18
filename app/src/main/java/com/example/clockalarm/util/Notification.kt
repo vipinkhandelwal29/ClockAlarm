@@ -26,14 +26,6 @@ fun Context.getNotification(title: String, body: String) {
         .setAutoCancel(true)
 
 
-   /* val notificationIntent = Intent(this, MainActivity::class.java)
-    val contentIntent = PendingIntent.getActivity(
-        this, 0, notificationIntent,
-        PendingIntent.FLAG_UPDATE_CURRENT
-    )
-    builder.setContentIntent(contentIntent)*/
-
-
     val notificationManager: NotificationManager =
         getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
@@ -44,8 +36,6 @@ fun Context.getNotification(title: String, body: String) {
         val channel = NotificationChannel(getString(R.string.app_name), name, importance).apply {
             description = descriptionText
         }
-        // Register the channel with the system
-
 
         notificationManager.createNotificationChannel(channel)
     }
