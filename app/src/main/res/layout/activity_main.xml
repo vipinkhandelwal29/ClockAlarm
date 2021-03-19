@@ -7,107 +7,138 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@drawable/border"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvFrom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="Select From Time"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <LinearLayout
-            android:id="@+id/llOne"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:padding="8dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintEnd_toEndOf="@id/tvFrom"
-            app:layout_constraintStart_toStartOf="@id/tvFrom"
-            app:layout_constraintTop_toBottomOf="@id/tvFrom">
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_baseline_alarm_24" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvTime1"
-                android:layout_width="wrap_content"
+                android:id="@+id/tvFrom"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:text="00:00"
+                android:layout_margin="16dp"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Select From Time"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </LinearLayout>
-
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvTo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Select To Time"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="@id/tvFrom"
-            app:layout_constraintStart_toStartOf="@id/tvFrom"
-            app:layout_constraintTop_toBottomOf="@id/llOne" />
-
-        <LinearLayout
-            android:id="@+id/llTwo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            app:layout_constraintEnd_toEndOf="@id/tvFrom"
-            app:layout_constraintStart_toStartOf="@id/tvTo"
-            app:layout_constraintTop_toBottomOf="@id/tvTo">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/llOne"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ic_baseline_alarm_24" />
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="@id/tvFrom"
+                app:layout_constraintStart_toStartOf="@id/tvFrom"
+                app:layout_constraintTop_toBottomOf="@id/tvFrom">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_baseline_alarm_24" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTime1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="00:00"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvTime2"
+                android:id="@+id/tvTo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Select To Time"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/tvFrom"
+                app:layout_constraintStart_toStartOf="@id/tvFrom"
+                app:layout_constraintTop_toBottomOf="@id/llOne" />
+
+            <LinearLayout
+                android:id="@+id/llTwo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="@id/tvFrom"
+                app:layout_constraintStart_toStartOf="@id/tvFrom"
+                app:layout_constraintTop_toBottomOf="@id/tvTo">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_baseline_alarm_24" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTime2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="00:00"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+            <Spinner
+                android:id="@+id/spinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:text="00:00"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="@id/tvFrom"
+                app:layout_constraintStart_toStartOf="@id/tvFrom"
+                app:layout_constraintTop_toBottomOf="@id/llTwo" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSetAlarm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/border"
+                android:padding="8dp"
+                android:text="Set Alarm"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
-
-        </LinearLayout>
-
-
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:layout_constraintEnd_toEndOf="@id/llTwo"
-            app:layout_constraintStart_toStartOf="@id/llTwo"
-            app:layout_constraintTop_toBottomOf="@id/llTwo" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnSetAlarm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Set Alarm"
-            app:layout_constraintEnd_toEndOf="@id/spinner"
-            app:layout_constraintStart_toStartOf="@id/spinner"
-            app:layout_constraintTop_toBottomOf="@id/spinner" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tvFrom"
+                app:layout_constraintStart_toStartOf="@id/tvFrom"
+                app:layout_constraintTop_toBottomOf="@id/spinner" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 </layout>
